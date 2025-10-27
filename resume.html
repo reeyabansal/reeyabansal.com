@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Reeya Bansal</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -57,34 +56,56 @@
             margin-bottom: 20px;
         }
 
+        .section-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-family: 'Playfair Display', serif;
+        }
+
         .resume-section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .resume-section h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            font-size: 1.3em;
+            margin-bottom: 5px;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        .resume-section h4 {
+            font-size: 1.1em;
+            margin: 5px 0;
+            font-weight: normal;
+            font-style: italic;
+            color: #555;
+        }
+
         .resume-section p {
             line-height: 1.6;
-        }
-
-        .resume-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .resume-section ul li {
             margin: 5px 0;
         }
 
+        .resume-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .resume-section ul li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
         .contact-info {
-            text-align: center; /* Centers the content */
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .contact-info p {
@@ -101,20 +122,26 @@
             text-decoration: underline;
         }
 
-        .resume-section strong {
-            font-weight: bold;
+        .summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #333;
+            line-height: 1.8;
         }
 
         .date {
             font-weight: normal;
-            color: #333;
-            margin-left: 10px;
-            font-size: 18px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        strong {
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Reeya Bansal</h1>
         <nav>
@@ -122,110 +149,115 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section id="resume">
             <h2>Resume</h2>
             
-            <!-- Contact Info -->
             <div class="contact-info">
-                <p><strong>Email:</strong> reeyabansal317@gmail.com | 
-                   <strong><a href="https://www.linkedin.com/in/reeya-bansal" target="_blank">LinkedIn</a></strong> | 
-                   <strong><a href="https://github.com/yourusername" target="_blank">GitHub</a></strong></p>
+                <p>
+                   <a href="mailto:reeyabansal317@gmail.com">reeyabansal317@gmail.com</a> | 
+                   <a href="https://www.linkedin.com/in/reeya-bansal" target="_blank">LinkedIn</a> | 
+                   <a href="https://github.com/reeyabansal" target="_blank">GitHub</a>
+                </p>
             </div>
 
-            <!-- Education -->
+            <div class="summary">
+                <p>Results-driven data enthusiast with hands-on experience in <strong>machine learning, statistical analysis, and automation</strong>. Proficient in <strong>Python</strong> (pandas, scikit-learn, TensorFlow) with expertise in <strong>data preprocessing, model training, and evaluation</strong>. Experienced in <strong>data-driven decision-making, process automation, and analytical reporting</strong>. Passionate about applying AI/ML to solve real-world problems and committed to continuous learning.</p>
+            </div>
+
+            <h3 class="section-title">EDUCATION</h3>
+            
             <div class="resume-section">
                 <h3>
                     <span>University of Toronto, St. George Campus</span> 
                     <span class="date">Sept. 2022 - Expected Dec. 2026</span>
                 </h3>
+                <h4>GPA 3.64, Dean's List Scholar, Enrolled in Arts and Science Internship Program | Toronto, ON</h4>
                 <ul>
-                    <li><strong>GPA:</strong> 3.64, <strong>Dean's List Scholar</strong></li>
-                    <li><strong>Enrolled in:</strong> Arts and Science Internship Program</li>
-                    <li><strong>Relevant Coursework:</strong> Methods of Data Analysis, Introduction to Machine Learning, Software Design, Data Structures and Analysis, Computer Architecture, Introduction to Artificial Intelligence</li>
-                    <li><strong>Awards:</strong> Roy Alvin Hope Award, William Kingston and Dr John Kingston Award, International Scholar Award</li>
-                </ul>
-                <h3>
-                    <span>The Shri Ram School Aravali</span>
-                    <span class="date">July 2022 - August 2022</span>
-                </h3>
-                <ul>
-                    <li><strong>All India Rank 3</strong> in CISCE 12th Boards 2022</li>
+                    <li><strong>Relevant Coursework:</strong> Introduction to Theory of Computation, Methods of Data Analysis, Introduction to Machine Learning, Software Design, Data Structures and Analysis, Computer Architecture, Introduction to Artificial Intelligence</li>
+                    <li><strong>Awards:</strong> The Regents In-Course Scholarship, Roy Alvin Hope Award, William Kingston and Dr John Kingston Award, International Scholar Award</li>
                 </ul>
             </div>
 
-            <!-- Work Experience -->
+            <h3 class="section-title">WORK EXPERIENCE</h3>
+
+            <div class="resume-section">
+                <h3>
+                    <span>IBM</span>
+                    <span class="date">May 2025 - Present</span>
+                </h3>
+                <h4>ML/AI Developer | Toronto, ON, Canada</h4>
+                <ul>
+                    <li>Fine-tuned <strong>large language models (LLMs)</strong> using <strong>InstructLab</strong> to simulate department-specific use cases, improving model alignment and task performance for internal applications.</li>
+                    <li>Developed an <strong>LLM-powered advisory system</strong> for automated code remediation, streamlining debugging workflows and enhancing compliance verification efficiency.</li>
+                    <li>Built an <strong>AIOps Incident Management workflow</strong> using <strong>LangChain</strong> with <strong>Retrieval-Augmented Generation (RAG)</strong>, enabling intelligent incident triage and response generation.</li>
+                    <li>Deployed a scalable <strong>AWS data pipeline</strong> supporting vectorized knowledge retrieval, integrating <strong>OpenSearch vector stores</strong> with ingestion and retrieval pipelines for optimized performance.</li>
+                </ul>
+            </div>
+
             <div class="resume-section">
                 <h3>
                     <span>Munich Re</span>
                     <span class="date">May 2024 - Aug. 2024</span>
                 </h3>
-                <p><strong>IT Strategy and Planning Intern, Toronto, ON, Canada</strong></p>
+                <h4>IT Strategy and Planning Intern | Toronto, ON, Canada</h4>
                 <ul>
-                    <li>Automated 5+ departmental processes using Power BI and Power Automate, reducing manual work by 40% and increasing efficiency.</li>
-                    <li>Enhanced Power BI dashboards with advanced filtering and visualization, improving data-driven decision-making across teams.</li>
-                    <li>Documented detailed business requirements for 3 IT projects, ensuring seamless execution within designated timelines and effective integration of business and technology.</li>
-                    <li>Generated ad-hoc reports using LeanIX to summarize documents, client histories, and more for business teams.</li>
-                    <li>Conducted compliance reviews for IT business solutions, ensuring adherence to risk management protocols and technical best practices.</li>
+                    <li>Automated 5+ departmental processes using <strong>Power BI and Power Automate</strong>, reducing manual work by 40% and increasing efficiency.</li>
+                    <li>Enhanced Power BI dashboards with <strong>advanced filtering and visualization</strong>, improving data-driven decision-making across teams.</li>
+                    <li>Documented detailed <strong>business requirements</strong> for 3 IT projects, ensuring seamless execution within designated timelines and effective integration of business and technology.</li>
+                    <li>Generated ad-hoc <strong>reports</strong> using <strong>LeanIX</strong> to summarize documents, client histories, and more for business teams.</li>
+                    <li>Conducted <strong>compliance reviews for IT business solutions</strong>, ensuring adherence to risk management protocols and technical best practices.</li>
                 </ul>
+            </div>
+
+            <div class="resume-section">
                 <h3>
                     <span>ReNew Power</span>
                     <span class="date">May 2023 - Jul. 2023</span>
                 </h3>
-                <p><strong>Data Science Intern, Gurugram, India</strong></p>
+                <h4>Data Science Intern | Gurugram, India</h4>
                 <ul>
                     <li>Developed Python automation scripts that processed and analyzed 1,000+ thermal images daily, reducing manual review time by 60%.</li>
-                    <li>Assisted on a Machine Learning project to perform image analytics using YOLOv8 model, successfully identifying production defects in solar panels.</li>
-                    <li>Aided collection and cleanup of data using Python libraries like pandas and NumPy.</li>
-                </ul>
-                <h3>
-                    <span>Ensuredit</span>
-                    <span class="date">Jun. 2022 - Aug. 2022</span>
-                </h3>
-                <p><strong>Software Intern, Gurugram, India</strong></p>
-                <ul>
-                    <li>Designed and implemented a ReactJS-based UI to facilitate broker commission calculations, improving financial transparency.</li>
-                    <li>Collaborated with developers to integrate UI components into a backend system using JavaScript and RESTful APIs.</li>
+                    <li>Assisted on a <strong>Machine Learning</strong> project to perform <strong>image analytics</strong> using YOLOv8 model, successfully identifying production defects in solar panels.</li>
+                    <li>Aided <strong>collection and cleanup</strong> of data using Python libraries like <strong>pandas</strong> and <strong>NumPy</strong>.</li>
                 </ul>
             </div>
 
-            <!-- Skills & Certifications -->
+            <h3 class="section-title">SKILLS, CERTIFICATIONS AND LEADERSHIP</h3>
+
             <div class="resume-section">
-                <h3>Skills & Certifications</h3>
-                <p><strong>Skills:</strong> Python (pandas, NumPy, SciPy, tkinter, scikit-learn), Power BI, R, LeanIX, Java, C, Power Automate, Canva, API Management, Linux</p>
-                <p><strong>Interests:</strong> Data Analysis, Data Visualization, Machine Learning Frameworks (TensorFlow, PyTorch), Algorithms, Programming</p>
+                <p><strong>Skills:</strong></p>
+                <ul>
+                    <li><strong>Python</strong> (pandas, numpy, tkinter, scikit-learn)</li>
+                    <li><strong>Power BI</strong>, R, LeanIX, Java, C</li>
+                    <li>Power Automate, API Management, Linux, LangChain</li>
+                </ul>
+                
+                <p><strong>Interests:</strong></p>
+                <ul>
+                    <li>Data Analysis, Data Visualization</li>
+                    <li><strong>Machine Learning</strong> Frameworks: <strong>TensorFlow, PyTorch</strong></li>
+                </ul>
+                
                 <p><strong>Certifications:</strong></p>
                 <ul>
-                    <li>Learning SQL Programming (LinkedIn Learning)</li>
-                    <li>pandas Essential Training (LinkedIn Learning)</li>
-                    <li>Power BI Essential Training (LinkedIn Learning)</li>
-                    <li>Tata Data Visualization (Forage)</li>
+                    <li>SQL (LinkedIn Learning)</li>
+                    <li>pandas (LinkedIn Learning)</li>
+                    <li>Power BI (LinkedIn Learning)</li>
+                    <li>Data Visualization (Forage)</li>
+                </ul>
+                
+                <p><strong>Leadership:</strong></p>
+                <ul>
+                    <li><strong>Director of Academic Events, WiCS</strong> (2024 – Present) – Organized academic events, led a team, and facilitated industry networking.</li>
+                    <li><strong>Director of Newsletter, WiCS</strong> (2023 – 2024) – Curated monthly content on tech updates, women in tech, and student life.</li>
                 </ul>
             </div>
-
-            <!-- Projects
-            <div class="resume-section">
-                <h3>Projects</h3>
-                <p><strong>Detecting Fraudulent Job Postings</strong> — 2024</p>
-                <ul>
-                    <li>Python (sklearn, pandas, re, joblib), Machine Learning - Logistic Regression</li>
-                </ul>
-                <p><strong>Predicting Electricity Consumption using Weather Data</strong> — 2024</p>
-                <ul>
-                    <li>R, Linear Regression Model, Statistical Methods of Data Analysis, ANOVA Tests</li>
-                </ul>
-                <p><strong>News Software with Interactive World Map UI</strong> — 2023</p>
-                <ul>
-                    <li>Java, Clean Architecture Principles, API Management</li>
-                </ul>
-            </div> -->
-        <!-- </section> -->
+        </section>
     </main>
 </body>
 </html>
