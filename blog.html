@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Reeya Bansal</title>
+  <meta name="description" content="Notes on agentic AI, RAG, and building reliable ML systems — by Reeya Bansal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RB</span>
+        <span class="brand-name">Reeya Bansal</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html" class="active">Writing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Writing</span>
+          <h2>Notes on building AI systems</h2>
+          <p>Short essays on what I'm learning — agentic workflows, retrieval, and the unglamorous work of making ML reliable.</p>
+        </div>
+
+        <div class="blog-note reveal">
+          <b>Heads up:</b> these three posts are starter drafts to seed the section — swap in your own words, dates, and links whenever you're ready.
+        </div>
+
+        <!-- POST 1 -->
+        <article class="post reveal">
+          <div class="post-meta">
+            <span>Aug 2025</span> · <span>6 min read</span> · <span class="read">Agentic AI</span>
+          </div>
+          <h3>What a multi-agent incident system taught me about reliability</h3>
+          <p class="excerpt">Building agents that plan and act is the fun part. Making them trustworthy at 3 a.m. during an incident is the real work — and it changed how I think about "done."</p>
+
+          <button class="post-toggle" aria-expanded="false" aria-controls="post-1-body">
+            <span data-label>Read the post</span> <span class="arw">→</span>
+          </button>
+          <div class="post-body" id="post-1-body">
+            <div class="post-body-inner">
+              <p>When I started on an agentic incident-response system, my mental model was "give the model good tools and it will figure things out." That model survives exactly until the first real incident, when the interesting question stops being <em>can it act</em> and becomes <em>can I trust what it just did</em>.</p>
+              <h4>Determinism where it matters</h4>
+              <p>The biggest shift was deciding which parts of the workflow are allowed to be creative and which are not. Retrieval, summarization, and drafting an operating procedure? Great places for a model to reason. Deciding whether to page a human or touch production? Those belong to explicit rules and guardrails, not to a probability distribution. Drawing that line clearly is what let the system reduce mean time to resolution without anyone losing sleep over what it might do next.</p>
+              <h4>Retrieval is the reliability story</h4>
+              <p>Most "hallucination" problems I ran into weren't reasoning failures — they were context failures. The agent answered confidently because it was handed thin or stale context. Investing in how architectural and historical data got structured into retrieval-ready stores did more for output quality than any prompt tweak.</p>
+              <h4>Observability isn't optional</h4>
+              <p>Every agent decision needs a trace: what it retrieved, what it considered, what it chose. Not for the demo — for the postmortem. The version of the system I'd trust is the one whose reasoning I can reconstruct after the fact.</p>
+              <p>The takeaway I keep returning to: an agent is only as good as the boundaries around it. The intelligence gets the headlines; the guardrails get the uptime.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="post reveal">
+          <div class="post-meta">
+            <span>Jul 2025</span> · <span>5 min read</span> · <span class="read">RAG</span>
+          </div>
+          <h3>RAG in practice: the data work nobody puts in the demo</h3>
+          <p class="excerpt">Everyone shows the retrieval arrow pointing into the LLM. Almost no one shows the weeks spent making the data on the other end of that arrow worth retrieving.</p>
+
+          <button class="post-toggle" aria-expanded="false" aria-controls="post-2-body">
+            <span data-label>Read the post</span> <span class="arw">→</span>
+          </button>
+          <div class="post-body" id="post-2-body">
+            <div class="post-body-inner">
+              <p>RAG diagrams are deceptively tidy: a query, a vector store, a language model, an answer. In practice, the quality of that answer is decided long before retrieval — in how the source data was cleaned, chunked, and structured.</p>
+              <h4>Chunking is a modeling decision</h4>
+              <p>Splitting documents isn't a preprocessing chore; it's a design choice that shapes what the model can and can't see. Too large and you drown the relevant sentence in noise. Too small and you strip away the context that made it meaningful. I ended up chunking around semantic boundaries rather than fixed token counts, and the difference in retrieval precision was immediate.</p>
+              <h4>Multiple sources, one shape</h4>
+              <p>Real systems pull from more than one place — architectural docs, historical records, structured tables. Normalizing all of that into a consistent, retrieval-ready shape (and keeping metadata that lets you filter later) is where a lot of the actual engineering lives. Vector stores like OpenSearch are the easy part; deciding what goes into them is not.</p>
+              <h4>Evaluate retrieval separately</h4>
+              <p>When answers are wrong, it's tempting to blame the model. But if you can't see whether the right context was retrieved in the first place, you're debugging blind. Measuring retrieval quality on its own — before the generation step — saved me from a lot of prompt-engineering dead ends.</p>
+              <p>RAG works. It just rewards the person willing to do the boring data work that the architecture diagram quietly assumes.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 3 -->
+        <article class="post reveal">
+          <div class="post-meta">
+            <span>Jun 2025</span> · <span>4 min read</span> · <span class="read">Career</span>
+          </div>
+          <h3>From dashboards to agents: how my path through data shaped how I build</h3>
+          <p class="excerpt">Solar panels, Power BI dashboards, and multi-agent systems don't look related. The thread running through all of them is the same question: how do you turn messy data into a decision someone can act on?</p>
+
+          <button class="post-toggle" aria-expanded="false" aria-controls="post-3-body">
+            <span data-label>Read the post</span> <span class="arw">→</span>
+          </button>
+          <div class="post-body" id="post-3-body">
+            <div class="post-body-inner">
+              <p>My first serious data job had me processing over a thousand thermal images of solar panels every day, hunting for hotspots. It was unglamorous and it taught me the most important lesson I've carried since: the model matters far less than whether the data feeding it reflects reality.</p>
+              <h4>Every role added a layer</h4>
+              <p>At ReNew Power I learned to trust pipelines over one-off scripts. At Munich Re I learned that a dashboard nobody understands is worth nothing — the automation only counts if it changes a decision. Now, building agentic systems, both lessons show up again: reliable inputs, and outputs framed so a human can actually act on them.</p>
+              <h4>The tools change; the question doesn't</h4>
+              <p>YOLOv8, Power BI, LangGraph — the technology on my resume keeps shifting. What's stayed constant is the shape of the work: take something noisy and high-volume, and produce something a person can trust enough to act on. Agents are just the latest, most capable way to do that.</p>
+              <p>If you're early in a data or ML career and worried your experience looks scattered, it might not be. Look for the question underneath the tools. Mine turned out to be pretty consistent all along.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="foot-name">Reeya Bansal</div>
+        <div class="foot-tag">AI/ML Engineer · Toronto, ON</div>
+      </div>
+      <nav class="foot-links">
+        <a href="mailto:reeyabansal317@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/reeya-bansal" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/reeyabansal" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <div class="foot-copy">© <span data-year></span> Reeya Bansal</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

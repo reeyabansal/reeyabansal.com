@@ -1,38 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Reeya Bansal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reeya Bansal — Software Engineer</title>
+  <meta name="description" content="Reeya Bansal is a software engineer who builds intelligent, data-driven systems across software, AI/ML, and cloud.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Reeya Bansal</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RB</span>
+        <span class="brand-name">Reeya Bansal</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <!-- <a href="projects.html">Projects</a> -->
+      </nav>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <section id="home">
-            <h2>Hello, I’m Reeya!</h2>
-            <img src="images/headshot-rb.jpg" alt="Reeya's Photo" class="profile-img">
-            <p>Welcome to my portfolio website! Here, you’ll find a curated selection of my projects, insights into my technical skills, and highlights from my experiences. I also have a dedicated resume page that provides a comprehensive overview of my qualifications and professional background. Feel free to explore, and don’t hesitate to reach out for collaboration opportunities or inquiries.</p>
-        </section>
-    </main>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Software Engineer · Toronto</span>
+          <h1>Hi, I'm Reeya - I <span class="hl">build software systems</span>, solve problems, and learn constantly.</h1>
+          <p class="lede">I work on intelligent, data-driven systems across software, AI, and cloud infrastructure.</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Words by Reeya. All rights reserved.</p>
-    </footer>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="projects.html">See my work <span class="arw">-></span></a>
+            <a class="btn btn-ghost" href="resume.html">Read my resume</a>
+          </div>
+
+          <div class="hero-mini">
+            <a href="mailto:reeyabansal317@gmail.com">Email</a>
+            <a href="https://github.com/reeyabansal" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/reeya-bansal" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <div class="stats">
+            <span class="stat"><b>16 mo</b><span>Industry Experience</span></span>
+            <span class="stat"><b>5+</b><span>Innovative Projects</span></span>
+            <span class="stat"><b>4</b><span>Academic Awards</span></span>
+            <!-- <span class="stat"><b>3.64</b><span>GPA</span></span> -->
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="portrait-card">
+            <canvas id="net" aria-hidden="true"></canvas>
+            <div class="portrait-inner">
+              <img src="images/headshot-rb.jpg" alt="Reeya Bansal" data-portrait>
+              <div class="portrait-fallback" style="display:none">RB</div>
+            </div>
+            <div class="portrait-tag"><span class="dot"></span> Open to software &amp; AI roles &amp; collaborations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENTLY -->
+    <div class="currently">
+      <div class="wrap">
+        <span class="label">Currently</span>
+        <p><b>AI/ML Engineer Intern</b> in IBM's GenAI Lab</p>
+      </div>
+    </div>
+
+    <!-- WHAT I DO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I work on</span>
+          <h2>A few things I keep coming back to</h2>
+        </div>
+        <div class="trio">
+          <div class="tile reveal">
+            <span class="num">01</span>
+            <h3>Software engineering</h3>
+            <p>Building backends, REST APIs, and full-stack apps with clean, maintainable architecture that holds up as it grows.</p>
+          </div>
+          <div class="tile reveal">
+            <span class="num">02</span>
+            <h3>AI &amp; machine learning</h3>
+            <p>Agentic LLM workflows, RAG, and classic ML - applied to real, messy problems rather than toy datasets.</p>
+          </div>
+          <div class="tile reveal">
+            <span class="num">03</span>
+            <h3>Data &amp; cloud</h3>
+            <p>Pipelines and cloud-native infrastructure on AWS that turn high-volume data into something people can act on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2>A few projects I'm proud of</h2>
+          <p>A mix of full-stack software, applied machine learning, and data work. The full list - with write-ups and code - lives on the Work page.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="eyebrow">Full-Stack + AI</span>
+              <span class="card-year">2026</span>
+            </div>
+            <h3>JobHunt - ATS Gap Analyzer</h3>
+            <p>A FastAPI job-search tool that ingests listings from multiple sources and analyzes your resume against them to surface missing skills and tailored rewrite suggestions.</p>
+            <div class="tags"><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">SQLite</span></div>
+            <a class="card-link" href="projects.html">See details <span class="arw">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="eyebrow">ML</span>
+              <span class="card-year">2024</span>
+            </div>
+            <h3>Fraudulent Job Detection</h3>
+            <p>A classification model that flags fraudulent job postings from engineered text and metadata features - improving safety in online job markets.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Logistic Regression</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/Detecting-Fraudulent-Job-Postings" target="_blank" rel="noopener">View on GitHub <span class="arw">→</span></a>
+          </article>
+        </div>
+
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="projects.html">See all work <span class="arw">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="foot-name">Reeya Bansal</div>
+        <div class="foot-tag">Software Engineer · Toronto, ON</div>
+      </div>
+      <nav class="foot-links">
+        <a href="mailto:reeyabansal317@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/reeya-bansal" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/reeyabansal" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <div class="foot-copy">© <span data-year></span> Reeya Bansal</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

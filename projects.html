@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <base href="https://reeyabansal.github.io/reeyabansal.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Reeya Bansal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Reeya Bansal</title>
+  <meta name="description" content="Projects by Reeya Bansal — machine learning, statistical modeling, and systems work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Reeya Bansal</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RB</span>
+        <span class="brand-name">Reeya Bansal</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Work</a>
+        <a href="resume.html">Resume</a>
+        <!-- <a href="blog.html">Writing</a> -->
+      </nav>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Work</span>
+          <h2>Projects</h2>
+          <p>A selection of full-stack software, applied machine learning, and statistical modeling projects — spanning job-search tooling, fraud detection, energy analytics, healthcare, and interactive systems.</p>
+        </div>
 
-            <!-- Project 1: Detecting Fraudulent Job Postings -->
-            <div class="project">
-                <h3>Detecting Fraudulent Job Postings (2024)</h3>
-                <!-- <img src="images/fraudulent-job-postings.jpg" alt="Fraudulent Job Postings" class="project-img"> -->
-                <p><strong>Technical Skills:</strong> Python, sklearn, pandas, re, joblib, Logistic Regression</p>
-                <p><strong>Motivation & Impact:</strong> This project was developed to identify fraudulent job postings, improving job seeker safety in online markets. 
-                By implementing data preprocessing and feature engineering, I extracted relevant details from job descriptions and utilized scikit-learn to build a Logistic Regression model for detecting fraud. 
-                The model was evaluated and refined through data visualizations, and team collaboration helped enhance its predictive capabilities. 
-                <br> <br> This project demonstrates my proficiency in machine learning, data manipulation, and Python programming, while addressing a critical real-world challenge in the job market.</p>
-                <a href="https://github.com/reeyabansal/Detecting-Fraudulent-Job-Postings" target="_blank">View on GitHub</a>
-            </div>
+        <div class="cards">
+          <!-- JobHunt -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Full-Stack + AI</span><span class="card-year">2026</span></div>
+            <h3>JobLens - Job Search &amp; ATS Gap Analyzer</h3>
+            <p>Built a modular <strong>FastAPI</strong> backend exposing REST APIs for a multi-source job ingestion and ATS analysis pipeline, integrating external ATS APIs into a deduplicated <strong>SQLite</strong> job database. Added resume matching that identifies missing skills and generates tailored rewrite recommendations to close the gap against a target role.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">scikit-learn</span><span class="tag">LangChain</span><span class="tag">Gemini</span><span class="tag">SQLite</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/JobLens" target="_blank" rel="noopener">View on GitHub <span class="arw">&rarr;</span></a>
+          </article>
 
+          <!-- Fraud -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Machine Learning</span><span class="card-year">2024</span></div>
+            <h3>Detecting Fraudulent Job Postings</h3>
+            <p>Built a classification model to flag fraudulent job postings and improve job-seeker safety in online markets. I engineered text and metadata features, then trained and refined a Logistic Regression model in scikit-learn, using data visualizations to evaluate and tune performance.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">Logistic Regression</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/Detecting-Fraudulent-Job-Postings" target="_blank" rel="noopener">View on GitHub <span class="arw">→</span></a>
+          </article>
 
-            <!-- Project 2: Predicting Electricity Consumption using Weather Data -->
-                <div class="project">
-                    <h3>Predicting Electricity Consumption using Weather Data (2024)</h3>
-                    <!-- <img src="images/electricity-consumption.jpg" alt="Electricity Consumption" class="project-img"> -->
-                    <p><strong>Technical Skills:</strong> R, Linear Regression, Statistical Analysis, ANOVA</p>
-                    <p><strong>Motivation & Impact:</strong> This project aimed to analyze the relationship between weather conditions and household electricity consumption in Sceaux, France. 
-                    I developed multiple linear regression models using R to process a large-scale dataset containing over 2 million measurements of power consumption and weather variables.
-                    Through statistical analysis, I identified temperature, humidity, and daylight as key predictors of energy usage. 
-                    I validated the models with ANOVA tests and residual analysis to ensure their reliability. 
-                    The findings provide valuable insights for optimizing energy management, helping reduce costs in response to weather variations. 
-                    <br> <br> This project showcases my proficiency in statistical analysis, data modeling, and R programming for practical applications in energy consumption prediction.</p>
-                    <!-- <a href="https://github.com/yourusername/electricity-consumption" target="_blank">View on GitHub</a> -->
-                </div>
+          <!-- Electricity -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Statistical Modeling</span><span class="card-year">2024</span></div>
+            <h3>Predicting Electricity Consumption from Weather</h3>
+            <p>Analyzed the relationship between weather and household electricity use in Sceaux, France, across 2M+ measurements. I built multiple linear regression models in R, identified temperature, humidity, and daylight as key predictors, and validated with ANOVA and residual analysis.</p>
+            <div class="tags"><span class="tag">R</span><span class="tag">Linear Regression</span><span class="tag">ANOVA</span><span class="tag">Statistical Analysis</span></div>
+            <span class="card-link" style="color:var(--muted)">Write-up available on request</span>
+          </article>
 
+          <!-- News -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Full-Stack Systems</span><span class="card-year">2023</span></div>
+            <h3>News App with Interactive World Map</h3>
+            <p>Developed an app that visualizes and filters global news by region and language. Following clean architecture, I integrated NewsAPI for real-time data and rendered a dynamic heat map of news activity, with filters for time frame, language, and location.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Clean Architecture</span><span class="tag">NewsAPI</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/press" target="_blank" rel="noopener">View on GitHub <span class="arw">→</span></a>
+          </article>
 
-            <!-- <!-- Project 3: News Software with Interactive World Map UI -->
-                <div class="project">
-                    <h3>News Software with Interactive World Map UI (2023)</h3>
-                    <!-- <img src="images/news-software.jpg" alt="News Software" class="project-img"> -->
-                    <p><strong>Technical Skills:</strong> Java, Clean Architecture, NewsAPI Integration</p>
-                    <p><strong>Motivation & Impact:</strong> This project focused on developing an interactive world map application for visualizing and filtering global news articles by region and language. 
-                    I implemented clean architecture principles to ensure the application’s scalability, maintainability, and testability. 
-                    By integrating NewsAPI, I was able to fetch real-time news data from multiple international sources and display it on a dynamic heat map visualization showing news activity intensity across different regions. 
-                    The application allows users to filter news feeds based on time frame, language, and geographical location. 
-                    Additionally, it provides intuitive features, including country-specific news views, article summaries, and trending news indicators. 
-                    <br> <br> This project demonstrates my proficiency in full-stack development, API integration, and creating user-centric applications to solve real-world information management challenges.</p>
-                    <a href="https://github.com/reeyabansal/press" target="_blank">View on GitHub</a>
-                </div>
+          <!-- Disease -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Algorithms</span><span class="card-year">2023</span></div>
+            <h3>Disease Diagnostic Tool</h3>
+            <p>An interactive tool that predicts likely conditions from user-reported symptoms. I designed a custom <em>DiseaseTree</em> to model symptom–disease relationships and a <em>PrecautionGraph</em> for personalized guidance, wrapped in a tkinter interface with probability visualizations.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">tkinter</span><span class="tag">Graphs</span><span class="tag">Trees</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/am-i-infected" target="_blank" rel="noopener">View on GitHub <span class="arw">→</span></a>
+          </article>
+        </div>
 
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="https://github.com/reeyabansal" target="_blank" rel="noopener">More on GitHub <span class="arw">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <!-- Project 4: Disease Diagnostic Software -->
-                <div class="project">
-                    <h3>Disease Diagnostic Software (2023)</h3>
-                    <!-- <img src="images/disease-diagnostic.jpg" alt="Disease Diagnostic Software" class="project-img"> -->
-                    <p><strong>Technical Skills:</strong> Python (tkinter), Graph Data Structures, Tree Algorithms</p>
-                    <p><strong>Motivation & Impact:</strong> This project developed an interactive diagnostic tool to predict potential diseases based on user-reported symptoms using Python. 
-                    I implemented a custom tree data structure, DiseaseTree, to model relationships between symptoms and diseases. 
-                    The system also included a graph-based structure, PrecautionGraph, to analyze health data and generate personalized health precautions. 
-                    With an intuitive tkinter-based user interface, users could input symptoms and visualize the disease likelihoods and recommended precautions. 
-                    I designed algorithms to calculate disease probabilities based on symptom patterns and traverse complex symptom-disease relationships efficiently. 
-                    <br> <br> This project demonstrates my strong algorithmic thinking, data structure implementation, and the practical application of computer science concepts to healthcare challenges.</p>
-                    <a href="https://github.com/reeyabansal/am-i-infected" target="_blank">View on GitHub</a>
-                </div>
-        </section>
-    </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="foot-name">Reeya Bansal</div>
+        <div class="foot-tag">Software Engineer · Toronto, ON</div>
+      </div>
+      <nav class="foot-links">
+        <a href="mailto:reeyabansal317@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/reeya-bansal" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/reeyabansal" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <div class="foot-copy">© <span data-year></span> Reeya Bansal</div>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Words by Reeya. All rights reserved.</p>
-    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
