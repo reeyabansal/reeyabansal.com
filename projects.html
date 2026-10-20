@@ -32,10 +32,19 @@
         <div class="section-head reveal">
           <span class="eyebrow">Work</span>
           <h2>Projects</h2>
-          <p>A selection of full-stack software, applied machine learning, and statistical modeling projects — spanning job-search tooling, fraud detection, energy analytics, healthcare, and interactive systems.</p>
+          <p>A selection of full-stack software, applied machine learning, and statistical modeling projects — spanning computer vision, job-search tooling, fraud detection, energy analytics, healthcare, and interactive systems.</p>
         </div>
 
         <div class="cards">
+          <!-- PosturePilot -->
+          <article class="card reveal">
+            <div class="card-top"><span class="eyebrow">Computer Vision + ML</span><span class="card-year">2026</span></div>
+            <h3>PosturePilot - Real-Time Posture Monitor</h3>
+            <p>A privacy-first posture watchdog that runs entirely on-device. A background daemon reads the webcam with <strong>MediaPipe</strong> pose landmarks, computes distance-invariant ratio features (after the PoseX paper), and uses personalized calibration with Schmitt-trigger hysteresis to detect slouching, forward head, raised shoulders, and screen distance, raising an always-on-top alert when bad posture persists. Includes a <strong>FastAPI</strong> trends dashboard, optional <strong>PyTorch</strong> models that learn personal boundaries and adapt to seat or lighting changes, and an in-browser JavaScript demo. Only numeric features are stored, never frames.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">TinyDB</span><span class="tag">JavaScript</span></div>
+            <a class="card-link" href="https://github.com/reeyabansal/PosturePilot" target="_blank" rel="noopener">View on GitHub <span class="arw">&rarr;</span></a>
+          </article>
+
           <!-- JobHunt -->
           <article class="card reveal">
             <div class="card-top"><span class="eyebrow">Full-Stack + AI</span><span class="card-year">2026</span></div>
